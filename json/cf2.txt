@@ -1,5 +1,0 @@
-cf-sample-app-nodejs-master       node.js 1.5.15
-shakti       php 4.3.16
-a4       php 4.3.16
-cf-ex-php-info       default
-hihihihihi       php 4.3.21

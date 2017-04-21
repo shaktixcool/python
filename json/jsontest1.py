@@ -8,7 +8,7 @@ oauthTokenResponse = requests.post(
 authorization = oauthTokenResponse.json()['token_type'] + ' ' + oauthTokenResponse.json()['access_token']
 #print (authorization)
 appsResponse = requests.get(
-    "https://api.run.pivotal.io/v2/spaces",
+    "https://api.run.pivotal.io/v2/apps",
     headers={'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': authorization}
 )
 resp = appsResponse.text
