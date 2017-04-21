@@ -1,0 +1,43 @@
+{
+  "links": {
+    "self": {
+      "href": "https://api.run.pivotal.io"
+    },
+    "cloud_controller_v2": {
+      "href": "https://api.run.pivotal.io/v2",
+      "meta": {
+        "version": "2.78.0"
+      }
+    },
+    "cloud_controller_v3": {
+      "href": "https://api.run.pivotal.io/v3",
+      "meta": {
+        "version": "3.13.0"
+      }
+    },
+    "uaa": {
+      "href": "https://uaa.run.pivotal.io"
+    }
+  }
+}{
+  "links": {
+    "self": {
+      "href": "https://api.run.pivotal.io"
+    },
+    "cloud_controller_v2": {
+      "href": "https://api.run.pivotal.io/v2",
+      "meta": {
+        "version": "2.78.0"
+      }
+    },
+    "cloud_controller_v3": {
+      "href": "https://api.run.pivotal.io/v3",
+      "meta": {
+        "version": "3.13.0"
+      }
+    },
+    "uaa": {
+      "href": "https://uaa.run.pivotal.io"
+    }
+  }
+}
