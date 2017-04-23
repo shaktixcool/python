@@ -1,43 +1,116 @@
 {
-  "links": {
-    "self": {
-      "href": "https://api.run.pivotal.io"
-    },
-    "cloud_controller_v2": {
-      "href": "https://api.run.pivotal.io/v2",
-      "meta": {
-        "version": "2.78.0"
+  "total_results": 4,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+    {
+      "metadata": {
+        "guid": "997a6826-6755-431a-9b48-ca8e692e3841",
+        "url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841",
+        "created_at": "2016-03-29T15:29:16Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "development",
+        "organization_guid": "cb36340e-15fc-412d-95b9-dab078766f46",
+        "space_quota_definition_guid": null,
+        "isolation_segment_guid": null,
+        "allow_ssh": true,
+        "organization_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46",
+        "developers_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/developers",
+        "managers_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/managers",
+        "auditors_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/auditors",
+        "apps_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/apps",
+        "routes_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/routes",
+        "domains_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/domains",
+        "service_instances_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/service_instances",
+        "app_events_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/app_events",
+        "events_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/events",
+        "security_groups_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/security_groups",
+        "staging_security_groups_url": "/v2/spaces/997a6826-6755-431a-9b48-ca8e692e3841/staging_security_groups"
       }
     },
-    "cloud_controller_v3": {
-      "href": "https://api.run.pivotal.io/v3",
-      "meta": {
-        "version": "3.13.0"
+    {
+      "metadata": {
+        "guid": "8c779c38-638f-409c-b963-5d746481eaab",
+        "url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab",
+        "created_at": "2016-06-27T21:29:05Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "test",
+        "organization_guid": "cb36340e-15fc-412d-95b9-dab078766f46",
+        "space_quota_definition_guid": null,
+        "isolation_segment_guid": null,
+        "allow_ssh": true,
+        "organization_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46",
+        "developers_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/developers",
+        "managers_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/managers",
+        "auditors_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/auditors",
+        "apps_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/apps",
+        "routes_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/routes",
+        "domains_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/domains",
+        "service_instances_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/service_instances",
+        "app_events_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/app_events",
+        "events_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/events",
+        "security_groups_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/security_groups",
+        "staging_security_groups_url": "/v2/spaces/8c779c38-638f-409c-b963-5d746481eaab/staging_security_groups"
       }
     },
-    "uaa": {
-      "href": "https://uaa.run.pivotal.io"
+    {
+      "metadata": {
+        "guid": "e70e2d83-b56e-4814-8d10-b95d41e00051",
+        "url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051",
+        "created_at": "2016-07-26T15:16:51Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "space1",
+        "organization_guid": "cb36340e-15fc-412d-95b9-dab078766f46",
+        "space_quota_definition_guid": null,
+        "isolation_segment_guid": null,
+        "allow_ssh": true,
+        "organization_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46",
+        "developers_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/developers",
+        "managers_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/managers",
+        "auditors_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/auditors",
+        "apps_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/apps",
+        "routes_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/routes",
+        "domains_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/domains",
+        "service_instances_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/service_instances",
+        "app_events_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/app_events",
+        "events_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/events",
+        "security_groups_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/security_groups",
+        "staging_security_groups_url": "/v2/spaces/e70e2d83-b56e-4814-8d10-b95d41e00051/staging_security_groups"
+      }
+    },
+    {
+      "metadata": {
+        "guid": "d4e667c5-e696-4a92-8327-0b53a5ba60a1",
+        "url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1",
+        "created_at": "2016-07-26T15:19:01Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "labtest",
+        "organization_guid": "cb36340e-15fc-412d-95b9-dab078766f46",
+        "space_quota_definition_guid": null,
+        "isolation_segment_guid": null,
+        "allow_ssh": true,
+        "organization_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46",
+        "developers_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/developers",
+        "managers_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/managers",
+        "auditors_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/auditors",
+        "apps_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/apps",
+        "routes_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/routes",
+        "domains_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/domains",
+        "service_instances_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/service_instances",
+        "app_events_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/app_events",
+        "events_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/events",
+        "security_groups_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/security_groups",
+        "staging_security_groups_url": "/v2/spaces/d4e667c5-e696-4a92-8327-0b53a5ba60a1/staging_security_groups"
+      }
     }
-  }
-}{
-  "links": {
-    "self": {
-      "href": "https://api.run.pivotal.io"
-    },
-    "cloud_controller_v2": {
-      "href": "https://api.run.pivotal.io/v2",
-      "meta": {
-        "version": "2.78.0"
-      }
-    },
-    "cloud_controller_v3": {
-      "href": "https://api.run.pivotal.io/v3",
-      "meta": {
-        "version": "3.13.0"
-      }
-    },
-    "uaa": {
-      "href": "https://uaa.run.pivotal.io"
-    }
-  }
+  ]
 }
