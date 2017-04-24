@@ -26,10 +26,8 @@ for o in jsonorgs['resources']:
     #forgs.write(nameorgs + "       " +spaceurl+'\n')
     forgs.write(guidorg+'\n')
     #print (spaceurl)
-    file.close()
     forgs1 = open("C:\\shakti\\python\\json\\files\\cforgs2.txt",'r')
-    #file.seek(0)
-    content = forgs.readlines()
+    content = forgs1.readlines()
     #print (content)
     for i in content:
         #print (i)

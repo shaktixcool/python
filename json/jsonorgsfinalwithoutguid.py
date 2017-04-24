@@ -22,50 +22,46 @@ jsonorgs = simplejson.loads(orgsresp)
 for o in jsonorgs['resources']:
     forgs = open("C:\\shakti\\python\\json\\files\\cforgs2.txt",'a')
     nameorgs = o['entity']['name']
-    guidorg = o['metadata']['guid']
+    spaceurl = o['metadata']['guid']
     #forgs.write(nameorgs + "       " +spaceurl+'\n')
-    forgs.write(guidorg+'\n')
+    forgs.write(spaceurl+'\n')
     #print (spaceurl)
-    file.close()
     forgs1 = open("C:\\shakti\\python\\json\\files\\cforgs2.txt",'r')
-    #file.seek(0)
-    content = forgs.readlines()
+    content = forgs1.readlines()
     #print (content)
+
     for i in content:
-        #print (i)
+        print (i)
         #j = "http://api.run.pivotal.io" + urllib3.quote(i)
-        #j = ("https://api.run.pivotal.io/v2/organizations/{0}/spaces".format(i.strip('\n')))
-        #print (j)
-        #print (type (i))
+
+        j = ("https://api.run.pivotal.io/v2/organizations/{0}/spaces".format(i.strip('\n')))
+        print (j)
+        print (type (i))
+
+        #print ("%s"%j)
+
         spacesResponse = requests.get("https://api.run.pivotal.io/v2/organizations/{0}/spaces".format(i.strip('\n')),
             headers={'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': authorization}
         )
         spacesresp = (spacesResponse.text)
-        #print (spacesresp)
+
         file = open("C:\\shakti\\python\\json\\files\\cfspaces1.txt",'a')
+        file.seek(0)
         spacescontent = file.write(spacesresp)
         file.close()
         jsonspaces = simplejson.loads(spacesresp)
         for s in jsonspaces['resources']:
                 fspaces = open("C:\\shakti\\python\\json\\files\\cfspaces2.txt",'a')
                 namespaces = s['entity']['name']
-                guidspace = s['metadata']['guid']
-                #fspaces.write(namespaces + "       "+appsurl +'\n')
-                fspaces.write(guidspace+'\n')
-                #print (guidspace)
-                fspace1 = open("C:\\shakti\\python\\json\\files\\cfspaces2.txt",'r')
-                content1 = fspace1.readlines()
-                for j in content1:
-                        #print (j)
-
+                appsurl = s['entity']['apps_url']
+                fspaces.write(namespaces + "       "+appsurl +'\n')
+                for j in appsurl:
                         appsResponse = requests.get(
-                        "https://api.run.pivotal.io/v2/spaces/{0}/apps".format(j.strip('\n')),
+                        "https://api.run.pivotal.io"+j,
                         headers={'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': authorization}
                         )
                         appsresp = appsResponse.text
-                        #print (appsResponse)
-
-                        file = open("C:\\shakti\\python\\json\\files\\cfapps1.txt",'a')
+                        file = open("C:\\shakti\\python\\json\\files\\cfapps1.txt",'w')
                         file.seek(0)
                         appscontent = file.write(appsresp)
                         file.close()
@@ -74,13 +70,16 @@ for o in jsonorgs['resources']:
                                 fapps = open("C:\\shakti\\python\\json\\files\\cfapps2.txt",'a')
                                 nameapps = a['entity']['name']
                                 bp = a['entity']['detected_buildpack']
-                                #fapps.write(nameapps + "       "+bp +'\n')
+                                fapps.write(nameapps + "       "+bp +'\n')
                     #forgs.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
-                                if bp == None:
-                                    bp = "default"
-                                    fapps.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
-                                else:
-                                    fapps.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
+
+"""
+
+            if bp == None:
+                bp = "default"
+                forgs.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
+            else:
+                forgs.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
 
 
     #fo.write(doc['entity']['name']+ "       " + doc['entity']['detected_buildpack']+'\n')
