@@ -1,0 +1,35 @@
+
+C:\Users\shakt_000>cf curl /v2/organizations
+{
+   "total_results": 1,
+   "total_pages": 1,
+   "prev_url": null,
+   "next_url": null,
+   "resources": [
+      {
+         "metadata": {
+            "guid": "cb36340e-15fc-412d-95b9-dab078766f46",
+            "url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46",
+            "created_at": "2016-03-29T15:29:16Z",
+            "updated_at": "2016-12-01T15:02:13Z"
+         },
+         "entity": {
+            "name": "teamlocal",
+            "billing_enabled": false,
+            "quota_definition_guid": "b72b1acb-ff4f-468d-99c0-05cd91012b62",
+            "status": "suspended",
+            "default_isolation_segment_guid": null,
+            "quota_definition_url": "/v2/quota_definitions/b72b1acb-ff4f-468d-99c0-05cd91012b62",
+            "spaces_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/spaces",
+            "domains_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/domains",
+            "private_domains_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/private_domains",
+            "users_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/users",
+            "managers_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/managers",
+            "billing_managers_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/billing_managers",
+            "auditors_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/auditors",
+            "app_events_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/app_events",
+            "space_quota_definitions_url": "/v2/organizations/cb36340e-15fc-412d-95b9-dab078766f46/space_quota_definitions"
+         }
+      }
+   ]
+}

@@ -20,7 +20,7 @@ file.close()
 
 jsonorgs = simplejson.loads(orgsresp)
 for o in jsonorgs['resources']:
-    forgs = open("C:\\shakti\\python\\json\\files\\cforgs2.txt",'a')
+    forgs = open("C:\\shakti\\python\\json\\files\\cforgs2.txt",'w')
     nameorgs = o['entity']['name']
     guidorg = o['metadata']['guid']
     #forgs.write(nameorgs + "       " +spaceurl+'\n')
