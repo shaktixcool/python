@@ -25,18 +25,13 @@ for o in jsonorgs['resources']:
     with open("C:\\shakti\\python\\json\\files\\cforgs2.txt",'w') as forgs:
         nameorgs = o['entity']['name']
         guidorg = o['metadata']['guid']
-        #forgs.write(nameorgs + "       " +spaceurl+'\n')
         forgs.write(guidorg+'\n')
         #print (spaceurl)
     with open("C:\\shakti\\python\\json\\files\\cforgs2.txt",'r') as forgs1:
         content = forgs1.readlines()
         #print (content)
         for i in content:
-        #print (i)
-        #j = "http://api.run.pivotal.io" + urllib3.quote(i)
-        #j = ("https://api.run.pivotal.io/v2/organizations/{0}/spaces".format(i.strip('\n')))
-        #print (j)
-        #print (type (i))
+            #print (i)
             spacesResponse = requests.get("https://api.run.pivotal.io/v2/organizations/{0}/spaces".format(i.strip('\n')),
             headers={'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': authorization}
             )
@@ -47,7 +42,7 @@ for o in jsonorgs['resources']:
                 #print (spacesresp)
                 jsonspaces = simplejson.loads(spacesresp)
                 for s in jsonspaces['resources']:
-                    with open("C:\\shakti\\python\\json\\files\\cfspaces2.txt",'a') as fspaces:
+                    with open("C:\\shakti\\python\\json\\files\\cfspaces2.txt",'w') as fspaces:
                         namespaces = s['entity']['name']
                         guidspace = s['metadata']['guid']
                         #fspaces.write(namespaces + "       "+appsurl +'\n')
@@ -57,7 +52,8 @@ for o in jsonorgs['resources']:
                         content1 = fspace1.readlines()
                     for j in content1:
                         print (j)
-"""                        appsResponse = requests.get(
+
+                        appsResponse = requests.get(
                         "https://api.run.pivotal.io/v2/spaces/{0}/apps".format(j.strip('\n')),
                         headers={'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': authorization}
                         )
@@ -67,22 +63,21 @@ for o in jsonorgs['resources']:
                         #file1.seek(0)
                             appscontent = file1.write(appsresp)
                         #file.close()
-"""
-"""                                  jsonapps = simplejson.loads(appsresp)
+                            jsonapps = simplejson.loads(appsresp)
                                     #if jsonapps[total_results] == 0:
                                     #    nameapps = "None"
                                     #else:
-                                    for a in jsonapps['resources']:
-                                        fapps = open("C:\\shakti\\python\\json\\files\\cfapps2.txt",'a')
-                                        nameapps = a['entity']['name']
-                                        bp = a['entity']['detected_buildpack']
+                            for a in jsonapps['resources']:
+                                fapps = open("C:\\shakti\\python\\json\\files\\cfapps2.txt",'a')
+                                nameapps = a['entity']['name']
+                                bp = a['entity']['detected_buildpack']
                                 #fapps.write(nameapps + "       "+bp +'\n')
                                         #fapps.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
-                                        if bp == None:
-                                            bp = "default"
-                                            fapps.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
-                                        else:
-                                            fapps.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
+                                if bp == None:
+                                    bp = "default"
+                                    fapps.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
+                                else:
+                                    fapps.write(nameorgs + "       " +namespaces+"          "+nameapps+"       "+bp +'\n')
 
 
     #fo.write(doc['entity']['name']+ "       " + doc['entity']['detected_buildpack']+'\n')
